@@ -1,13 +1,22 @@
+/* body{
+  background-color:rgb(248,244,244);
+} */
+
+
 .logo{
   width: 300px;
   position: fixed;
   left:10px;
   top: 10px;
+  background-color: rgba(216, 213, 213, 0.822);
+  padding:10px;
 }
 
 .navbar{
   height:65px;
   font-family: 'Jura', sans-serif;
+
+
 }
 
 /* .nav-item{
@@ -17,27 +26,30 @@
 } */
 
 #navAbout{
-  padding:20px;
+  padding:10px;
   background-color:#205;
   position:fixed;
-  right:218px;
+  right:220px;
   top:10px;
+  font-size: 20px;
 }
 
 #navPortfolio{
-  padding:20px;
+  padding:10px;
   background-color:#205;
   position:fixed;
-  right:115px;
+  right:118px;
   top:10px;
+  font-size: 20px;
 }
 
 #navContacts{
-  padding:20px;
+  padding:10px;
   background-color:#205;
   position:fixed;
   right:10px;
   top:10px;
+  font-size: 20px;
 }
 
 #profilepic{
@@ -52,18 +64,18 @@
 
 #portfolioHeader{
   background-color:#205;
-  height: 50px;
   color:whitesmoke;
   font-family: 'Jura', sans-serif;
   text-align: center;
   font-size: 40px;
   padding:5px;
   margin:20px;
-  height:70px;
+  height:100px;
 }
 
-p{
+p, ul{
   font-family: 'Jura', sans-serif;
+  font-size:20px;
 }
 
 .jumbotron{
@@ -92,7 +104,7 @@ p{
 
 .card {
   width: 325px;
-  height: 250px;
+  height: 300px;
   margin: 1em;
   perspective: 1500px;
 }
@@ -230,21 +242,21 @@ p{
   color: #355cc9;
   padding-right: 10px;
 }
-.back .location,
+.back .projectName,
 .back .price {
   font-weight: 600;
   color: #355cc9;
   grid-row: 1;
   font-size: 0.86em;
 }
-.back .location {
+.back .projectName {
   grid-column: 1/3;
   justify-self: left;
 }
-.back .price {
+/* .back .price {
   grid-column: 3/-1;
   justify-self: right;
-}
+} */
 .back .button {
   grid-column: 1/-1;
   justify-self: center;
@@ -256,7 +268,7 @@ p{
   letter-spacing: 1px;
   font-weight: 600;
   cursor: pointer;
-  display: block;
+  display: inline-block;
   padding: 0 1.5em;
   height: 3em;
   line-height: 2.9em;
@@ -270,6 +282,7 @@ p{
   backface-visibility: hidden;
   transition: 0.3s ease-in-out;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  max-width:10em;
 }
 .button:hover {
   background-color: #fff;
@@ -282,11 +295,27 @@ p{
   color: #355cc9;
   border-color: #355cc9;
   text-shadow: none;
+  grid-column: 2;
 }
 .button.return:hover {
   background-color: #355cc9;
   color: #fff;
   box-shadow: none;
+  grid-column: 2;
+}
+
+.button.visit {
+  line-height: 3em;
+  color: #355cc9;
+  border-color: #355cc9;
+  text-shadow: none;
+  grid-column: 3;
+}
+.button.visit:hover {
+  background-color: #355cc9;
+  color: #fff;
+  box-shadow: none;
+  right:10px;
 }
 
 ::-webkit-scrollbar {
@@ -304,3 +333,112 @@ p{
 ::-webkit-scrollbar-thumb:hover {
   background: #355cc9;
 }
+
+/* social media links */
+@import '//codepen.io/chrisdothtml/pen/ojLzJK.css';
+.social-btns .btn,
+.social-btns .btn:before,
+.social-btns .btn .fa {
+  transition: all 0.35s;
+  transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+.social-btns .btn:before {
+  top: 90%;
+  left: -110%;
+}
+.social-btns .btn .fa {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+.social-btns .btn.linkedIn:before {
+  background-color: rgb(0,119,181);
+}
+.social-btns .btn.linkedIn .fa {
+  color: rgb(0,119,181);
+}
+.social-btns .btn.github:before {
+  background-color:rgb(35,40,46);
+}
+.social-btns .btn.github .fa {
+  color:rgb(35,40,46);
+}
+.social-btns .btn.google:before {
+  background-color: #dc4a38;
+}
+.social-btns .btn.google .fa {
+  color: #dc4a38;
+}
+.social-btns .btn.resume:before {
+  background-color: #f26798;
+}
+.social-btns .btn.resume .fa {
+  color: #f26798;
+}
+
+.social-btns .btn:focus:before,
+.social-btns .btn:hover:before {
+  top: -10%;
+  left: -10%;
+}
+.social-btns .btn:focus .fa,
+.social-btns .btn:hover .fa {
+  color: #fff;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.social-btns {
+  height: 90px;
+  margin: auto;
+  font-size: 0;
+  text-align: center;
+  position: absolute;
+  /* top: 0;
+  bottom: 0; */
+  left: 0;
+  right: 0;
+}
+.social-btns .btn {
+  display: inline-block;
+  background-color: #fff;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  margin: 0 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 28%;
+  box-shadow: 0 5px 15px -5px rgba(0,0,0,0.1);
+  opacity: 0.99;
+}
+.social-btns .btn:before {
+  content: '';
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.social-btns .btn .fa {
+  font-size: 38px;
+  vertical-align: middle;
+}
+
+
+@media only screen and (max-width: 1089px) {
+  #profilepic{
+    max-width:350px;
+  }
+}
+
+/* footer{
+  background-color:rgb(181, 178, 178);
+  color:#205;
+  position:relative;
+  bottom:0;
+  width:100%;
+}
+
+.social-btns{
+  margin-bottom:100px;
+} */
